@@ -1,0 +1,216 @@
+& when (@media-common =true) {
+    body {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    //Slider
+    .slick-active:active {
+        cursor: grab;
+    }
+
+    .slick-dots li button,
+    .slick-dots li .cart.table-wrapper .actions-toolbar>.action,
+    .slick-dots li .action-gift {
+        border: 2px solid @color-buttons__black;
+        border-radius: 0px;
+        box-shadow: none;
+        cursor: pointer;
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 3px 4px;
+
+        &:hover {
+            background: @color-buttons__black;
+        }
+    }
+
+    .slick-dots li {
+        cursor: pointer;
+        display: inline-block;
+        height: 14px;
+        margin: 0px 3px;
+        padding: 0;
+        position: relative;
+        vertical-align: middle;
+        width: 14px;
+    }
+
+    .slick-dots li button:hover,
+    .slick-dots li .cart.table-wrapper .actions-toolbar>.action:hover,
+    .slick-dots li .action-gift:hover {
+        border: 2px solid @color-buttons__black;
+    }
+
+    // Slider pages text position
+    .slick-slide {
+        position: relative;
+        cursor: pointer;
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 15%;
+            bottom: 40%;
+            min-height: 150px;
+        }
+
+    }
+
+    //
+    //Banners text
+    //
+    .pagebuilder-slide-wrapper [data-element="content"] p em,
+    .pagebuilder-banner-wrapper [data-element="content"] span em {
+        color: @color-em__grey;
+    }
+
+    strong {
+        letter-spacing: 3px;
+    }
+
+    .pagebuilder-overlay {
+        cursor: pointer;
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] {
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        margin-left: 60px;
+        min-height: 150px;
+
+    }
+
+}
+
+//November sale
+.banner {
+    transition: ease-in-out .3s;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(70%);
+        transition: ease-in-out .3s;
+
+    }
+}
+
+//Shop By Brands
+.shopByBrands {
+    font-size: 36px;
+    position: relative;
+
+    &:before {
+        right: 0%;
+        content: "";
+        display: block;
+        width: 495px;
+        position: absolute;
+        top: 50%;
+        border-top: 1px solid @color-line__grey;
+    }
+
+    &:after {
+        left: 0%;
+        content: "";
+        display: block;
+        width: 495px;
+        position: absolute;
+        top: 50%;
+        border-top: 1px solid @color-line__grey;
+    }
+}
+
+//  Underline in  banners
+.pagebuilder-mobile-hidden {
+    cursor: pointer;
+}
+
+.pagebuilder-banner-wrapper [data-element="content"] {
+    max-width: 250px;
+}
+
+.pagebuilder-banner-wrapper [data-element="content"] p span,
+.pagebuilder-slide-wrapper [data-element="content"] p span {
+    &:nth-child(5) {
+        color: #575757;
+        margin-top: 10px;
+        border-bottom: 1px solid;
+        padding-bottom: 8px;
+        text-decoration: none;
+        letter-spacing: 2px;
+
+    }
+}
+
+
+
+//
+//  Mobile (Screen S)
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .hp-slider-page {
+        position: relative;
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 10;
+            bottom: 10%;
+            width: 40%;
+        }
+    }
+
+
+
+    .shopByBrands {
+
+
+        &:before {
+            content: none;
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+}
+
+//
+//  Mobile (Screen M)
+//  ---------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .hp-slider-page {
+        position: relative;
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 40%;
+        }
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] {
+        position: absolute;
+        margin-right: 30px;
+        width: 45%;
+    }
+
+
+
+    .shopByBrands {
+
+
+        &:before {
+            content: none;
+        }
+
+        &:after {
+            content: none;
+        }
+    }
+}
