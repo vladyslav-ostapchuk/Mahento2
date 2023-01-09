@@ -1,10 +1,4 @@
 & when (@media-common =true) {
-    body {
-        overflow-y: scroll;
-        overflow-x: hidden;
-        color: @color-buttons__black;
-        box-sizing: border-box;
-    }
 
     .slick-dots li button,
     .slick-dots li .cart.table-wrapper .actions-toolbar>.action,
@@ -31,7 +25,6 @@
         margin: 0px 3px;
         padding: 0;
         position: relative;
-        // vertical-align: middle;
         width: 14px;
     }
 
@@ -59,27 +52,15 @@
 
     }
 
-    //
-    //------Banners text
-    //
-
-
-    .pagebuilder-poster-content [data-element="content"] p span,
-    .pagebuilder-poster-content [data-element="content"] p span strong {
-        letter-spacing: 3px;
-    }
-
-
     .pagebuilder-slide-wrapper [data-element="content"] p em span,
     .pagebuilder-banner-wrapper [data-element="content"] span em,
     .rokan-product-heading h2>span {
-        color: @color-em__grey;
-        letter-spacing: 0px;
-
+        color: @color-form__grey;
+        font-weight: 500;
     }
 
     strong {
-        letter-spacing: 1px;
+        letter-spacing: 3px;
         font-weight: 600;
     }
 
@@ -93,13 +74,8 @@
         left: 35%;
         margin-left: 120px;
         min-height: 150px;
-
+        max-width: 230px;
     }
-
-    .pagebuilder-banner-wrapper [data-element="content"] {
-        max-width: 250px;
-    }
-
 }
 
 //November sale
@@ -140,23 +116,20 @@
     }
 }
 
-//  Underline in  banners
 .pagebuilder-mobile-hidden {
     cursor: pointer;
 }
 
-
-
 .pagebuilder-banner-wrapper [data-element="content"] p span,
 .pagebuilder-slide-wrapper [data-element="content"] p span {
     &:nth-child(5) {
-        color: #575757;
-        margin-top: 10px;
+        color: @color-crossPrice__grey;
         border-bottom: 1px solid;
         padding-bottom: 8px;
         text-decoration: none;
         letter-spacing: 2px;
-        font-weight: 500;
+        font-weight: 600;
+        line-height: 55px;
     }
 }
 
@@ -165,7 +138,6 @@
 //
 //  Mobile (Screen S)
 //  ---------------------------------------------
-
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
     .hp-slider-page {
         position: relative;
@@ -186,7 +158,6 @@
 //
 //  Mobile (Screen M)
 //  ---------------------------------------------
-
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
     .hp-slider-page {
         position: relative;
@@ -204,10 +175,4 @@
         margin-right: 30px;
         width: 45%;
     }
-
-
-
-
-
-
 }
