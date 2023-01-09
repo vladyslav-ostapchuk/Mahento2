@@ -2,11 +2,8 @@
     body {
         overflow-y: scroll;
         overflow-x: hidden;
-    }
-
-    //Slider
-    .slick-active:active {
-        cursor: grab;
+        color: @color-buttons__black;
+        box-sizing: border-box;
     }
 
     .slick-dots li button,
@@ -34,7 +31,7 @@
         margin: 0px 3px;
         padding: 0;
         position: relative;
-        vertical-align: middle;
+        // vertical-align: middle;
         width: 14px;
     }
 
@@ -47,7 +44,11 @@
     // Slider pages text position
     .slick-slide {
         position: relative;
-        cursor: pointer;
+        cursor: default;
+
+        &:active {
+            cursor: grabbing;
+        }
 
         .pagebuilder-slide-wrapper [data-element="content"] {
             position: absolute;
@@ -59,18 +60,30 @@
     }
 
     //
-    //Banners text
+    //------Banners text
     //
-    .pagebuilder-slide-wrapper [data-element="content"] p em,
-    .pagebuilder-banner-wrapper [data-element="content"] span em {
-        color: @color-em__grey;
-    }
 
-    strong {
+
+    .pagebuilder-poster-content [data-element="content"] p span,
+    .pagebuilder-poster-content [data-element="content"] p span strong {
         letter-spacing: 3px;
     }
 
-    .pagebuilder-overlay {
+
+    .pagebuilder-slide-wrapper [data-element="content"] p em span,
+    .pagebuilder-banner-wrapper [data-element="content"] span em,
+    .rokan-product-heading h2>span {
+        color: @color-em__grey;
+        letter-spacing: 0px;
+
+    }
+
+    strong {
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+
+    .pagebuilder-banner-wrapper {
         cursor: pointer;
     }
 
@@ -78,9 +91,13 @@
         position: absolute;
         top: 25%;
         left: 35%;
-        margin-left: 60px;
+        margin-left: 120px;
         min-height: 150px;
 
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] {
+        max-width: 250px;
     }
 
 }
@@ -128,9 +145,7 @@
     cursor: pointer;
 }
 
-.pagebuilder-banner-wrapper [data-element="content"] {
-    max-width: 250px;
-}
+
 
 .pagebuilder-banner-wrapper [data-element="content"] p span,
 .pagebuilder-slide-wrapper [data-element="content"] p span {
@@ -141,7 +156,7 @@
         padding-bottom: 8px;
         text-decoration: none;
         letter-spacing: 2px;
-
+        font-weight: 500;
     }
 }
 
@@ -159,22 +174,12 @@
             position: absolute;
             left: 10;
             bottom: 10%;
-            width: 40%;
+            width: 50%;
         }
     }
 
-
-
-    .shopByBrands {
-
-
-        &:before {
-            content: none;
-        }
-
-        &:after {
-            content: none;
-        }
+    .pagebuilder-poster-content [data-element="content"] {
+        min-width: 300px;
     }
 }
 
@@ -202,15 +207,7 @@
 
 
 
-    .shopByBrands {
 
 
-        &:before {
-            content: none;
-        }
 
-        &:after {
-            content: none;
-        }
-    }
 }

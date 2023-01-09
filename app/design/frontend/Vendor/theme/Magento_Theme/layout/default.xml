@@ -10,6 +10,8 @@
             </block>
         </referenceContainer>
         
+
+
           <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_width" xsi:type="number">176</argument>
@@ -17,6 +19,8 @@
                 <argument name="logo_alt" xsi:type="string" translate="true" >Drexel store!</argument>
             </arguments>
         </referenceBlock>
+
+
 
         <referenceContainer name="footer">
             <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
