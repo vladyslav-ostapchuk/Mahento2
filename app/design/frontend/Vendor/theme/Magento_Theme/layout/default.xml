@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="header.panel">
             <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
@@ -9,8 +9,6 @@
                 </arguments>
             </block>
         </referenceContainer>
-        
-
 
           <referenceBlock name="logo">
             <arguments>
@@ -21,12 +19,20 @@
         </referenceBlock>
 
 
+            <!-- FOOTER -->
+            <referenceBlock name="report.bugs" remove="true"/>
+             <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
 
-        <referenceContainer name="footer">
+             <referenceContainer name="footer">
             <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
+                    <block class="Magento\Cms\Block\Block" name="footer-5task">
+                          <arguments>
+                              <argument name="block_id" xsi:type="string">task-5</argument>
+                         </arguments>
+                    </block>
         </referenceContainer>
-        <referenceBlock name="report.bugs" remove="true"/>
-        <move element="copyright" destination="before.body.end"/>
+
     </body>
 </page>
 

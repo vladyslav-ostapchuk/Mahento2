@@ -25,34 +25,31 @@
 
     // Our Products 
     .hp-our-products {
-        // .toproduct {
-        //     // .lib-icon-font(@icon-cart);
-        // }
-
         .price-label {
             display: none;
         }
 
         .product-item-name {
             text-transform: uppercase;
-
         }
 
         .product-item-link {
             color: @color-form__grey;
             transition: ease-out 0.3s;
-            font-size: 14px;
+            .lib-font-size(14px);
             font-weight: 500;
+            letter-spacing: 1px;
 
             &:hover {
                 transition: ease-out 0.3s;
                 color: @color-buttons__black;
+                color: кув;
                 text-decoration: none;
             }
         }
 
         .price-box {
-            font-family: 'Oswald';
+            font-family: @font-family-oswald;
             font-weight: 700;
             position: relative;
             z-index: 3;
@@ -60,15 +57,15 @@
             transition: ease-out 0.3s;
 
             .special-price .price {
-                font-size: 18px;
+                .lib-font-size (18px);
 
             }
         }
 
         // Position and animation for menu with QuickView/WishList/Compare buttons
         .product-item-actions .actions-primary+.actions-secondary {
-            display: flex;
-            flex-direction: column;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(column);
             background: rgba(255, 255, 255, 0.96);
             padding: 15px 0px;
             position: absolute;
@@ -87,17 +84,14 @@
             a.action {
                 line-height: 43px;
                 width: 60px;
-                font-size: 16px;
+                .lib-font-size(16px);
             }
         }
 
         .action.towishlist::before {
-            font-size: 45px;
+            .lib-font-size(45px);
             line-height: 24px;
             color: @color-buttons__black;
-
-
-
         }
 
         // Animation for price and button section
@@ -142,7 +136,7 @@
                 border-bottom: 1px solid @color-buttons__black ;
                 border-radius: 0;
                 text-transform: uppercase;
-                font-size: 14px;
+                .lib-font-size(14px);
                 letter-spacing: 1px;
                 font-weight: 600;
                 color: @color-buttons__black ;
@@ -152,7 +146,7 @@
                 background: 0 0;
                 padding: 6px 0px 10px 0px;
                 transition: ease-out .3s;
-                font-family: 'Oswald', sans-serif;
+                font-family: @font-family-oswald;
                 opacity: 0;
 
                 &:hover {
@@ -187,21 +181,18 @@
 //
 //  Mobile
 //  _____________________________________________
-.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
 
-    .hp-our-project-heading {
-        margin-left: 2rem;
-    }
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
 
     .hp-our-products {
         .product-item-actions .actions-primary+.actions-secondary {
-            display: flex;
-            flex-direction: column;
+            .lib-vendor-prefix-display(flex);
+            .lib-vendor-prefix-flex-direction(column);
             background: rgba(255, 255, 255, 0.96);
-            padding: 15px 0px;
+            padding: 15px 10px;
             position: absolute;
             bottom: 0;
-            left: 6rem;
+            left: 12rem;
             opacity: 0;
         }
 
@@ -216,11 +207,11 @@
             }
         }
 
-        //  Price animation
+        // Animation for price and button sections
         .product-item {
             &:hover {
                 .product-item-actions .actions-primary+.actions-secondary {
-                    transition: ease-out 0.3s;
+                    transition: ease-out 0.4s;
                     transform: translate(0, -18.5rem);
                     opacity: 1;
                     z-index: 1;
@@ -232,7 +223,7 @@
 
                 .price-box,
                 .price-final_price {
-                    transition: ease-out 0.3s;
+                    transition: ease-out 0.4s;
                     opacity: 0;
                     transform: translate(95%, 0);
                 }
@@ -247,13 +238,10 @@
 
 .media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__s) {
 
-    .hp-our-project-heading {
-        margin-left: 2rem;
-    }
+
 
     .product-item-info {
         .products-grid & {
-            background: 0;
 
             &:hover,
             &.active {
@@ -266,7 +254,6 @@
 
                 .product-item-inner {
                     display: block;
-                    background: 0;
                 }
 
                 .sidebar & {
