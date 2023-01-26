@@ -1,0 +1,183 @@
+& when (@media-common =true) {
+
+    .slick-dots li button,
+    .slick-dots li .cart.table-wrapper .actions-toolbar>.action,
+    .slick-dots li .action-gift {
+        border: 2px solid @color-buttons__black;
+        border-radius: 0px;
+        box-shadow: none;
+        cursor: pointer;
+        display: block;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 3px 4px;
+
+        &:hover {
+            background: @color-buttons__black;
+        }
+    }
+
+    .slick-dots li {
+        cursor: pointer;
+        display: inline-block;
+        height: 14px;
+        margin: 0px 3px;
+        padding: 0;
+        position: relative;
+        width: 14px;
+    }
+
+    .slick-dots li button:hover,
+    .slick-dots li .cart.table-wrapper .actions-toolbar>.action:hover,
+    .slick-dots li .action-gift:hover {
+        border: 2px solid @color-buttons__black;
+    }
+
+    // Slider pages text position
+    .slick-slide {
+        position: relative;
+        cursor: default;
+
+        &:active {
+            cursor: grabbing;
+        }
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 15%;
+            bottom: 40%;
+            min-height: 150px;
+        }
+
+    }
+
+    .pagebuilder-slide-wrapper [data-element="content"] p em span {
+        color: @color-form__grey;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] span em,
+    .rokan-product-heading h2>span {
+        color: @color-form__grey;
+        font-weight: 500;
+    }
+
+    strong {
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+
+    .pagebuilder-banner-wrapper {
+        cursor: pointer;
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] {
+        position: absolute;
+        top: 25%;
+        left: 35%;
+        margin-left: 120px;
+        min-height: 150px;
+        max-width: 230px;
+    }
+}
+
+//November sale
+.banner {
+    transition: ease-in-out .3s;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(70%);
+        transition: ease-in-out .3s;
+
+    }
+}
+
+//Shop By Brands
+.shopByBrands {
+    .lib-font-size(36px);
+    position: relative;
+
+    &:before {
+        right: 0%;
+        content: "";
+        display: block;
+        width: 495px;
+        position: absolute;
+        top: 50%;
+        border-top: 1px solid @color-line__grey;
+    }
+
+    &:after {
+        left: 0%;
+        content: "";
+        display: block;
+        width: 495px;
+        position: absolute;
+        top: 50%;
+        border-top: 1px solid @color-line__grey;
+    }
+}
+
+.pagebuilder-mobile-hidden {
+    cursor: pointer;
+}
+
+.pagebuilder-banner-wrapper [data-element="content"] p span,
+.pagebuilder-slide-wrapper [data-element="content"] p span {
+    &:nth-child(5) {
+        color: @color-crossPrice__grey;
+        border-bottom: 1px solid;
+        padding-bottom: 8px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 600;
+        line-height: 55px;
+    }
+}
+
+
+
+//
+//  Mobile (Screen S)
+//  ---------------------------------------------
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
+    .hp-slider-page {
+        position: relative;
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 10;
+            bottom: 10%;
+            width: 50%;
+        }
+    }
+
+    .pagebuilder-poster-content [data-element="content"] {
+        min-width: 200px;
+        left: -20% !important;
+    }
+}
+
+//
+//  Mobile (Screen M)
+//  ---------------------------------------------
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .hp-slider-page {
+        position: relative;
+
+        .pagebuilder-slide-wrapper [data-element="content"] {
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: 40%;
+        }
+    }
+
+    .pagebuilder-banner-wrapper [data-element="content"] {
+        position: absolute;
+        width: 45%;
+    }
+}

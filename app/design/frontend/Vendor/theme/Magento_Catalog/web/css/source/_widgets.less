@@ -1,0 +1,95 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common =true) {
+
+    .hp-products-grid {
+
+        .product-item-name-heading {
+            width: 92%;
+            text-transform: uppercase;
+            color: #222;
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            margin-top: 70px;
+            margin-bottom: 40px;
+        }
+
+        .product-items {
+            list-style-type: none;
+            padding: 0;
+
+            .product-item {
+                margin-bottom: 30px;
+                width: 32rem !important;
+            }
+        }
+
+        .product-item-link {
+            color: @color-form__grey;
+            transition: ease-out 0.3s;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            &:hover {
+                transition: ease-out 0.3s;
+                color: @color-buttons__black;
+                text-decoration: none;
+            }
+        }
+
+        //  Photo size
+        .product-item-info {
+            display: flex;
+
+            .product-image-container,
+            .product-item-photo {
+                width: 110px;
+                margin-right: 2rem;
+            }
+        }
+
+        .price-box,
+        .price {
+            font-family: 'Oswald';
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 10px;
+            vertical-align: middle;
+        }
+
+        .product-item-inner,
+        .price-label,
+        .old-price,
+        .actions-primary,
+        .actions-secondary {
+            display: none !important;
+        }
+
+        .hp-old-price-initial .old-price {
+            display: initial !important;
+        }
+
+        .price-box .old-price .price {
+            text-decoration: line-through;
+            font-weight: 400;
+            .lib-font-size(14px);
+        }
+    }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+
+    .hp-products-grid-heading,
+    .hp-products-grid {
+        margin-left: 2rem;
+    }
+}
