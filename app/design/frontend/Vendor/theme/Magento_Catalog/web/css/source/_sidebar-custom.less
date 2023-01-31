@@ -1,0 +1,108 @@
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum ='min') and (@break =@screen__m) {
+    .page-layout-2columns-left {
+        .column.main {
+            width: 75%; //Width main
+
+            .toolbar.toolbar-products {
+                .modes {
+
+
+                    .modes-mode {
+                        border: none;
+                        background: @color-burger__white;
+                        transition: ease-out .3s;
+
+                        &:hover {
+                            transition: ease-out .3s;
+                            background: @color-buttons__black;
+
+                            &::before {
+                                color: @color-letter__white
+                            }
+
+                            &:active {
+                                background: @color-buttons__black;
+                            }
+                        }
+                    }
+
+                    .active {
+                        background-color: @color-buttons__black;
+
+                        &::before {
+                            color: @color-letter__white
+                        }
+                    }
+
+                    .mode-list {
+                        margin-left: 5px;
+                    }
+                }
+
+                .toolbar-amount {
+                    float: right;
+                    border-bottom: 1px solid @color-form__grey;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    .lib-font-size(14px);
+                }
+
+                //Select position
+                .sorter {
+                    float: left;
+                }
+
+                .toolbar-sorter.sorter {
+                    padding: 0;
+
+                    .nice-select {
+                        border-radius: 0;
+                        margin-left: -14px;
+                    }
+
+                    .sort-asc {
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+
+        //Buttons under the slider
+        .slick-dots {
+            padding-top: 0;
+            margin-top: -30px;
+            background-color: 0;
+        }
+
+        //Sidebar section
+        .sidebar,
+        .sidebar-additional {
+            width: 25%;
+
+            .block {
+                .block-title strong {
+                    display: block;
+                    .lib-font-size(18);
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+                }
+
+                .empty {
+                    color: @color-form__grey;
+                    font-weight: 500;
+                }
+            }
+
+            .block.filter .filter-title {
+                font-size: 0;
+            }
+        }
+    }
+
+    //Filter Options Content
+}
