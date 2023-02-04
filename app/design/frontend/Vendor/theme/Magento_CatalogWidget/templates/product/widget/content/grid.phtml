@@ -15,6 +15,8 @@ use Magento\Framework\App\Action\Action;
 
     $image = 'new_products_content_widget_grid';
     $items = $block->getProductCollection()->getItems();
+    $hoverimg = 'category_page_grid_hover'; //t9 Variable for product image
+    $_imagehelper = $this->helper('Magento\Catalog\Helper\Image'); //t9 Variable for product image
 
     $showWishlist = true;
     $showCompare = true;
@@ -39,6 +41,13 @@ use Magento\Framework\App\Action\Action;
                             <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
                                 <?= $block->getImage($_item, $image)->toHtml() ?>
                             </a>
+
+                            <?php //t9 Product Image Hover 
+                            ?>
+                            <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo product-hover">
+                                <?= $block->getImage($_item, $hoverimg)->toHtml() ?>
+                            </a>
+
                             <div class="product-item-details">
                                 <strong class="product-item-name">
                                     <a title="<?= $block->escapeHtml($_item->getName()) ?>" href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-link">
@@ -77,7 +86,6 @@ use Magento\Framework\App\Action\Action;
                                                     <?php endif; ?>
                                                 </div>
                                             <?php endif; ?>
-
 
                                             <!--//! task_3-->
                                             <?php if ($showWishlist || $showCompare) : ?>
