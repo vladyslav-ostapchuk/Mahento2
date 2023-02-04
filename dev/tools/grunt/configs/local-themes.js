@@ -1,5 +1,5 @@
-"use strict"; module.exports = {
-
+"use strict";
+module.exports = {
   theme: {
     area: 'frontend',
     name: 'Vendor/theme',
