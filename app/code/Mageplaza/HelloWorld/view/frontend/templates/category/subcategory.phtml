@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Category layered navigation
+ * Add accordion
+ * @var Mageplaza\HelloWorld\ViewModel\SubCategory $viewmodel 
+ */
+$viewmodel = $block->getViewModel();
+?>
+
+<?php if ($viewmodel->getCategories() && count($viewmodel->getCategories()) > 0) : ?>
+    <div id="element" class="filter-options-item" data-mage-init='{
+                                                               "accordion":{
+                                                               "active": "false",
+                                                               "collapsible": true,
+                                                               "openedState": "deactivate",
+                                                               "multipleCollapsible": true,
+                                                               "openOnFocus": true,
+                                                               "animate": {"duration": 100}
+                                                             }}'>
+        <div data-role="collapsible" class="filter-options-title">
+            <div>
+                <span>Category</span>
+            </div>
+        </div>
+        <div data-role="content" class="filter-list">
+            <ol>
+                <?php foreach ($viewmodel->getCategories() as $subcategory) : ?>
+                    <li>
+                        <a href="<?= $subcategory->getUrl() ?>"><?= $subcategory->getName() ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ol>
+        </div>
+    </div>
+<?php endif; ?>
