@@ -1,60 +1,63 @@
-//
-//  Common
-//  _____________________________________________
-
-
-
-
-
 & when (@media-common =true) {
-    .lib-font-face(@family-name: 'Poppins',
-        @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
-        @font-weight: 300,
-        @font-style: italic,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
 
     .lib-font-face(@family-name: 'Poppins',
-        @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
+        @font-path: '@{baseDir}fonts/custom/Poppins-Thin',
         @font-weight: 300,
         @font-style: normal,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
+        @font-display: swap);
 
     .lib-font-face(@family-name: 'Poppins',
-        @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
+        @font-path: '@{baseDir}fonts/custom/Poppins-ExtraLight',
         @font-weight: 400,
         @font-style: normal,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
+        @font-display: swap);
 
     .lib-font-face(@family-name: 'Poppins',
         @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
         @font-weight: 500,
         @font-style: normal,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
+        @font-display: swap);
 
     .lib-font-face(@family-name: 'Poppins',
-        @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
+        @font-path: '@{baseDir}fonts/custom/Poppins-Semibold',
         @font-weight: 600,
         @font-style: normal,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
+        @font-display: swap);
 
     .lib-font-face(@family-name: 'Poppins',
-        @font-path: '@{baseDir}fonts/custom/Poppins-Regular',
+        @font-path: '@{baseDir}fonts/custom/Poppins-Bold',
         @font-weight: 700,
         @font-style: normal,
-        @font-display: swap // @font-format: 'ttf',
-        // @font-type: 'truetype'
-    );
+        @font-display: swap);
+
+
+
+    .lib-font-face(@family-name: 'Oswald',
+        @font-path: '@{baseDir}fonts/custom/Oswald/Oswald-Light',
+        @font-weight: 300,
+        @font-style: normal,
+        @font-display: swap);
+
+
+    .lib-font-face(@family-name: 'Oswald',
+        @font-path: '@{baseDir}fonts/custom/Oswald/Oswald-Regular',
+        @font-weight: 400,
+        @font-style: normal,
+        @font-display: swap);
+
+    .lib-font-face(@family-name: 'Oswald',
+        @font-path: '@{baseDir}fonts/custom/Oswald/Oswald-Semibold',
+        @font-weight: 600,
+        @font-style: normal,
+        @font-display: swap);
+
+    .lib-font-face(@family-name: 'Oswald',
+        @font-path: '@{baseDir}fonts/custom/Oswald/Oswald-Bold',
+        @font-weight: 700,
+        @font-style: normal,
+        @font-display: swap);
 }
+
 
 //
 //  Desktop
@@ -64,15 +67,5 @@
     h1 {
         .lib-css(font-size, @h1__font-size-desktop);
         .lib-css(margin-bottom, @h1__margin-bottom__desktop);
-    }
-}
-
-//
-//  Common
-//  _____________________________________________
-
-& when (@media-common =true) {
-    .items {
-        .lib-list-reset-styles();
     }
 }
