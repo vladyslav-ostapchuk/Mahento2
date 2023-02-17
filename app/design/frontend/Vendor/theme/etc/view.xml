@@ -7,6 +7,7 @@
                 <width>640</width>
                 <height>794</height>
             </image>
+             
             <image id="category_page_grid" type="small_image">
                 <width>640</width>
                 <height>794</height>
@@ -23,6 +24,34 @@
                 <width>640</width>
                 <height>794</height>
             </image>
+            <!-- task11  Product page-->
+            <image id="product_page_image_medium" type="image">
+                <width>500</width>
+                <height>600</height>
+            </image>
+            <image id="related_products_list" type="small_image">
+                 <width>640</width>
+                <height>794</height>
+            </image>
+             <image id="upsell_products_list" type="small_image">
+               <width>640</width>
+                <height>794</height>
+            </image>
+                 <image id="bundled_product_customization_page" type="thumbnail">
+                <width>640</width>
+                <height>794</height>
+            </image>
+             <image id="product_comparison_list" type="small_image">
+                <width>640</width>
+                <height>794</height>
+            </image>
         </images>
     </media>
+
+  <vars module="Magento_Catalog">
+        <!-- Gallery and magnifier theme settings. Start -->
+        <var name="gallery">
+            <var name="allowfullscreen">false</var> <!-- Turn on/off fullscreen (true/false) -->
+        </var>  
+    </vars>
 </view>
