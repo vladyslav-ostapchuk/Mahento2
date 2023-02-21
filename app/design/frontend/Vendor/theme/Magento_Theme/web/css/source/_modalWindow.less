@@ -1,0 +1,37 @@
+//
+//  Common
+//
+& when (@media-common =true) {
+    .modal-popup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-inner-wrap {
+            text-align: center;
+            position: static;
+            margin: 0;
+            margin: auto;
+            width: 50%;
+            border: 5px solid @color-line__grey;
+        }
+
+        .modal-content {
+            font-weight: 500;
+        }
+
+        .modal-footer {
+            .action-secondary {
+                background: #17a2b8;
+                color: @color-letter__white;
+                font-weight: 500;
+            }
+
+            .action-primary {
+                background: @color-green_modal-buttons;
+                border: @color-green_modal-buttons;
+                font-weight: 500;
+            }
+        }
+    }
+}
