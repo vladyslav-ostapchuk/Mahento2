@@ -18,7 +18,13 @@ var config = {
         // "tether": ["jquery"],
         // "bootstrap": ["jquery"],
         "select": ["jquery"],
-    }
-
+    },
+    // config: {
+    //     mixins: {
+    //         'Mirasvit_Giftr/js/item': {
+    //             'js/item-mixin': true
+    //         },
+    //     }
+    // }
 };
 
