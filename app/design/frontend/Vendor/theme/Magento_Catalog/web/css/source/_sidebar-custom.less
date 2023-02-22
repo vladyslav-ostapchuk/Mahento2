@@ -1,6 +1,6 @@
 & when (@media-common =true) {
     main {
-        padding: 0 !important; //work wwith !important
+        padding: 0 !important; //work with !important
 
         .description-newsletter {
             display: none;
@@ -9,7 +9,7 @@
 
     .page-layout-2columns-left {
         .column.main {
-            width: 75% !important; //Width main,work wwith !important
+            width: 75% !important; //Width main,work with !important
             padding-left: 0;
 
             .toolbar.toolbar-products {
@@ -53,7 +53,7 @@
                     border-bottom: 1px solid @color-form__grey;
                     letter-spacing: 1px;
                     text-transform: uppercase;
-                    .lib-font-size(14px);
+                    .lib-font-size(14);
                 }
 
                 //Select position
@@ -90,7 +90,7 @@
             }
 
             .product-image-container {
-                width: 330px !important; // work with !important
+                width: 330px !important; //overrided this method
             }
 
             .product-item-name a:hover {
@@ -98,7 +98,7 @@
             }
 
             .product-item-link {
-                font-weight: 500;
+                font-weight: @font-weight__heavier;
                 text-transform: uppercase;
                 color: @color-buttons__black;
                 .lib-font-size(18);
@@ -111,7 +111,7 @@
                 li,
                 p {
                     min-width: 650px;
-                    font-weight: 500;
+                    font-weight: @font-weight__heavier;
                     color: @color-form__grey;
                     .lib-line-height(22);
                     .lib-font-size(13);
@@ -159,7 +159,7 @@
                     color: @color-letter__white;
                     background: @color-buttons__black;
                     font-style: normal;
-                    font-weight: 500;
+                    font-weight: @font-weight__heavier;
                     .lib-font-size(14);
                     text-transform: uppercase;
                     letter-spacing: 1px;
@@ -181,19 +181,19 @@
 
             .price-box {
                 font-family: @font-family-oswald;
-                font-weight: 700;
+                font-weight: @font-weight__bold;
                 position: relative;
                 margin-top: 10px;
                 transition: ease-out 0.3s;
 
                 .special-price .price {
-                    .lib-font-size (18px);
+                    .lib-font-size (18);
                 }
 
                 .old-price {
                     text-decoration: line-through;
                     font-weight: 400;
-                    .lib-font-size(14px);
+                    .lib-font-size(14);
                 }
             }
         }
@@ -257,25 +257,25 @@
     //Sidebar section
     .page-layout-2columns-left .sidebar-additional,
     .sidebar-main {
-        width: 25% !important; //work wwith !important
+        width: 25% !important; //work with !important
 
         .block {
             .block-title strong {
                 display: block;
                 .lib-font-size(18);
-                font-weight: 500;
+                font-weight: @font-weight__heavier;
                 margin-bottom: 10px;
                 letter-spacing: 1px;
             }
 
             .empty {
                 color: @color-form__grey;
-                font-weight: 500;
+                font-weight: @font-weight__heavier;
             }
         }
 
         .block.filter .filter-title {
-            font-size: 0;
+            .lib-font-size(0);
         }
 
         //Buttons under the slider
@@ -388,7 +388,7 @@
     //GRID CATALOG
     .products.wrapper.grid.products-grid {
         .actions-secondary {
-            z-index: 3 !important; //work with !im
+            z-index: 3 !important; //work with !important
         }
 
         .product-items .product-item {

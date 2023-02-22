@@ -10,27 +10,26 @@
         .modal-inner-wrap {
             text-align: center;
             position: static;
-            margin: 0;
-            margin: auto;
+            margin: 0 auto;
             width: 50%;
             border: 5px solid @color-line__grey;
         }
 
         .modal-content {
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
         }
 
         .modal-footer {
             .action-secondary {
-                background: #17a2b8;
+                background: @color-green_modal-buttons;
                 color: @color-letter__white;
-                font-weight: 500;
+                font-weight: @font-weight__heavier;
             }
 
             .action-primary {
                 background: @color-green_modal-buttons;
                 border: @color-green_modal-buttons;
-                font-weight: 500;
+                font-weight: @font-weight__heavier;
             }
         }
     }

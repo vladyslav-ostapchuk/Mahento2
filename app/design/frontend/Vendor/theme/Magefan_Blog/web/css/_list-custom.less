@@ -15,7 +15,7 @@
                     color: @color-buttons__black;
                     text-transform: uppercase;
                     .lib-font-size(14);
-                    font-weight: 600;
+                    font-weight: @font-weight__semibold;
                 }
             }
         }
@@ -23,7 +23,7 @@
         .blog-widget-recent .post-description .post-text-hld {
             margin-top: 0;
             min-height: auto;
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
             color: @color-form__grey;
         }
 
@@ -40,7 +40,7 @@
             }
 
             .post-info::before {
-                font-size: 2.8rem !important;
+                font-size: 2.8rem !important; // Did it because of overrides from PageBuilder
                 margin: 0 -8px 5px -6px;
                 padding-right: 5px;
             }

@@ -11,7 +11,7 @@
                     .lib-font-size(18);
                     color: @color-buttons__black;
                     text-transform: uppercase;
-                    font-weight: 500;
+                    font-weight: @font-weight__heavier;
                     letter-spacing: 1px;
                 }
             }
@@ -104,7 +104,7 @@
         .old-price .price-wrapper .price {
             .lib-font-size(16);
             color: @color-form__grey;
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
             text-decoration: line-through;
         }
 
@@ -116,7 +116,7 @@
             margin-top: 10px;
 
             .special-price .price {
-                .lib-font-size (23px);
+                .lib-font-size (23);
                 color: @color-buttons__black;
             }
 
@@ -129,7 +129,7 @@
         .stock.available,
         .attribute.sku,
         .attribute.sku .type {
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
             text-transform: initial;
             color: @color-buttons__black;
             .lib-font-size(13);
@@ -153,9 +153,9 @@
 
             .primary {
                 border: none;
-                font-size: 14px;
+                .lib-font-size(14);
                 letter-spacing: 1px;
-                font-weight: 600;
+                font-weight: @font-weight__semibold;
                 color: @color-buttons__black;
                 padding: 0 0 10px;
                 border-bottom: 1px solid @color-buttons__black;
@@ -174,7 +174,7 @@
 
         p,
         li {
-            font-weight: 500;
+            font-weight: @font-weight__heavier;
             .lib-line-height(22);
             color: @color-form__grey;
         }
@@ -266,7 +266,7 @@
 
     .review-add .block-content {
         span {
-            font-weight: 500;
+            font-weight: @font-weight__regular;
             text-align: left;
             .lib-font-size(13);
         }
@@ -307,7 +307,7 @@
 
     // Submit button Reviews
     .actions-toolbar {
-        margin-left: 0 !important;
+        margin-left: 0 !important; //overrided this method
 
         .primary.actions-primary {
             .action.submit.primary {
@@ -370,7 +370,6 @@
     .page-layout-1column {
         .product-info-main {
             width: 58% !important; //Work with !important
-            // padding-right: 20px;
         }
 
         .product.media {
@@ -407,7 +406,7 @@
     }
 
     .table.additional-attributes tbody tr .data {
-        font-weight: 500;
+        font-weight: @font-weight__heavier;
         color: @color-form__grey;
     }
 

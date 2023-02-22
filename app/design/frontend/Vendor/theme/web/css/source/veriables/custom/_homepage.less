@@ -54,19 +54,19 @@
 
     .pagebuilder-slide-wrapper [data-element="content"] p em span {
         color: @color-form__grey;
-        font-weight: 500;
+        font-weight: @font-weight__heavier;
         font-style: normal;
     }
 
     .pagebuilder-banner-wrapper [data-element="content"] span em,
     .rokan-product-heading h2>span {
         color: @color-form__grey;
-        font-weight: 500;
+        font-weight: @font-weight__heavier;
     }
 
     strong {
         letter-spacing: 3px;
-        font-weight: 600;
+        font-weight: @font-weight__semibold;
     }
 
     .pagebuilder-banner-wrapper {
@@ -97,7 +97,7 @@
 
 //Shop By Brands
 .shopByBrands {
-    .lib-font-size(36px);
+    .lib-font-size(36);
     position: relative;
 
     &:before {
@@ -133,7 +133,7 @@
         padding-bottom: 8px;
         text-decoration: none;
         letter-spacing: 2px;
-        font-weight: 600;
+        font-weight: @font-weight__semibold;
         line-height: 55px;
     }
 }
@@ -157,7 +157,7 @@
 
     .pagebuilder-poster-content [data-element="content"] {
         min-width: 200px;
-        left: -20% !important;
+        left: -20% !important; //overrided this method
     }
 }
 
