@@ -1,28 +1,46 @@
 <?xml version="1.0"?>
-
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                                     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="header.panel">
-            <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
-                <arguments>
-                    <argument name="css_class" xsi:type="string">header links</argument>
-                </arguments>
-            </block>
-        </referenceContainer>
-        
+
+
+        <move element="navigation.sections" destination="header-wrapper" after="logo" />
+        <move element="header.panel" destination="header-wrapper" after="navigation.sections" />
+        <move element="authorization-link" destination="header.panel" before="-" />
+        <move element="wish-list-link" destination="header.panel" after="authorization-link" />
+        <move element="minicart" destination="header.panel" before="top.search" />
+        <move element="top.search" destination="header.panel" after="-" />
+
           <referenceBlock name="logo">
             <arguments>
-                <argument name="logo_width" xsi:type="number">176</argument>
-                <argument name="logo_height" xsi:type="number">46</argument>
-                <argument name="logo_alt" xsi:type="string" translate="true" >Drexel store!</argument>
+                    <argument name="logo_width" xsi:type="number">176</argument>
+                    <argument name="logo_height" xsi:type="number">46</argument>
+                    <argument name="logo_alt" xsi:type="string" translate="true" >Drexel store!</argument>
             </arguments>
         </referenceBlock>
 
-        <referenceContainer name="footer">
-            <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" after="footer_links" template="Magento_Store::switch/stores.phtml"/>
-        </referenceContainer>
-        <referenceBlock name="report.bugs" remove="true"/>
-        <move element="copyright" destination="before.body.end"/>
+            <!-- FOOTER -->
+            <referenceBlock name="report.bugs" remove="true"/>
+            <referenceBlock name="footer_links" remove="true"/>
+            <referenceBlock name="copyright" remove="true"/>
+            <referenceBlock name="form.subscribe" remove="true"/>
+
+         
+    
+            <referenceContainer name="footer">
+                <block class="Magento\Store\Block\Switcher"
+                       name="store_switcher" 
+                       as="store_switcher"
+                       after="footer_links" 
+                       template="Magento_Store::switch/stores.phtml"
+                />
+                <block class="Magento\Cms\Block\Block" name="footer-5task">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">task-5</argument>
+                    </arguments>
+                </block>
+            </referenceContainer>
+
     </body>
 </page>
 
