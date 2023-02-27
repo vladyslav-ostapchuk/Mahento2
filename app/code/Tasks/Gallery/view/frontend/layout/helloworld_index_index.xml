@@ -16,4 +16,6 @@
                 </arguments>
             </block>
     </referenceContainer>
+    
+    <update handle="cms_page_view_selectable_home_newsletter"/>
 </page>

@@ -1,10 +1,6 @@
 & when (@media-common =true) {
     main {
         padding: 0 !important; //work with !important
-
-        .description-newsletter {
-            display: none;
-        }
     }
 
     .page-layout-2columns-left {
@@ -375,6 +371,11 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__m) {
+    .products.list.items.product-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
     //LIST Catalog
     .products.wrapper.list.products-list {
@@ -398,5 +399,11 @@
                 }
             }
         }
+    }
+
+    #html-body [data-pb-style="PEMU8RN"],
+    #html-body [data-pb-style="G4J6A5E"],
+    #html-body [data-pb-style="O9R8URT"] {
+        min-height: 415px !important;
     }
 }
