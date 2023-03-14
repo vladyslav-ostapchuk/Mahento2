@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+      <!--  https://developer.adobe.com/commerce/frontend-core/guide/layouts/xml-manage/#create-selectable-layouts
+            https://bsscommerce.com/confluence/create-new-layout-extends-override-layout-in-magento-2/
+            https://webkul.com/blog/how-to-create-custom-layout-page/
+            https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/layouts/xml-instructions.html#fedg_layout_xml-instruc_ex_upd
+            -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <!-- <block class="Magento\Cms\Block\Page" name="cms_page" /> s-->
+            <referenceBlock name="form.subscribe" remove="false"/>
+        </referenceContainer>
+    </body>
+</page>
+

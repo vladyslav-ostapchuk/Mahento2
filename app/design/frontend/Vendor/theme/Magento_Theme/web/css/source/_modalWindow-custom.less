@@ -1,0 +1,36 @@
+//
+//  Common
+//
+& when (@media-common =true) {
+    .modal-popup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-inner-wrap {
+            text-align: center;
+            position: static;
+            margin: 0 auto;
+            width: 50%;
+            border: 5px solid @color-line__grey;
+        }
+
+        .modal-content {
+            font-weight: @font-weight__heavier;
+        }
+
+        .modal-footer {
+            .action-secondary {
+                background: @color-green_modal-buttons;
+                color: @color-letter__white;
+                font-weight: @font-weight__heavier;
+            }
+
+            .action-primary {
+                background: @color-green_modal-buttons;
+                border: @color-green_modal-buttons;
+                font-weight: @font-weight__heavier;
+            }
+        }
+    }
+}
