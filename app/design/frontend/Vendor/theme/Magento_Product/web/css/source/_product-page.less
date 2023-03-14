@@ -144,11 +144,11 @@
             margin-top: -25px;
 
             .fieldset .actions {
-                margin-left: 70px;
+                margin-left: 55px;
             }
 
             .action.tocart {
-                width: 30.5%;
+                width: 35%;
             }
 
             .primary {
@@ -381,7 +381,7 @@
         height: 590px !important; //Work with !important
     }
 
-    //!first and second SLIDERS 
+    //!First and Second SLIDERS 
     .upsell,
     .related .title {
         margin-bottom: 30px;
@@ -393,14 +393,18 @@
 
     .products-related .product-items .product-item {
         &:hover button {
-            transform: translate(148%, 0) !important; //Work with !important
+            transform: translate(130%, 0) !important; //Work with !important
             opacity: 1;
+        }
+
+        .related-available .product-item-details .price-box {
+            margin-left: 20px;
         }
     }
 
     .products-upsell .product-items .product-item {
         &:hover button {
-            transform: translate(136%, 0) !important; //Work with !important
+            transform: translate(126%, 0) !important; //Work with !important
             opacity: 1;
         }
     }
@@ -415,12 +419,13 @@
         margin-left: -130px;
 
         .label {
-            padding-right: 60px;
+            padding-right: 50px;
+            margin-top: -2px;
         }
     }
 }
 
-//mobile
+//Mobile
 .media-width(@extremum, @break) when (@extremum ='max') and (@break =@screen__s) {
     #maincontent.page-main div.columns {
         padding: 0 15px;
@@ -446,7 +451,7 @@
 
     .products-related .product-items .product-item {
         &:hover button {
-            transform: translate(140%, 0) !important; //Work with !important
+            transform: translate(126%, 0) !important; //Work with !important
         }
     }
 
